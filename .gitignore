@@ -1,0 +1,43 @@
+# Build output
+[Bb]in/
+[Oo]bj/
+[Oo]ut/
+publish/
+*.dll
+*.exe
+*.pdb
+
+# .NET / MSBuild
+project.lock.json
+*.binlog
+*.nupkg
+*.snupkg
+artifacts/
+
+# Test results
+[Tt]est[Rr]esult*/
+*.trx
+*.coverage
+*.coveragexml
+coverage*.json
+coverage*.xml
+coverage*.info
+
+# Rider / IntelliJ
+.idea/
+*.sln.iml
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+
+# Claude Code — local machine settings
+.claude/settings.local.json
+
+# Cursor — internal docs / rules / reference data (not for public repo)
+.cursor/
+
+# OS
+.DS_Store
+Thumbs.db
