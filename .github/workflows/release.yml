@@ -12,7 +12,7 @@ jobs:
     # git has no notion of tag ordering, so nothing else stops that by accident.
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v7
         with:
           fetch-depth: 0 # need full tag history to compare against, not just the pushed ref
 
@@ -47,9 +47,9 @@ jobs:
           # under 2. Re-add if/when there's real demand for an Intel Mac binary.
     runs-on: ${{ matrix.os }}
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v7
 
-      - uses: actions/setup-dotnet@v5
+      - uses: actions/setup-dotnet@v6
         with:
           dotnet-version: "10.0.x"
 
@@ -71,7 +71,7 @@ jobs:
           cp "NetworkRoutesConflictResolver/bin/Release/net10.0/${{ matrix.rid }}/publish/${{ matrix.binary }}" \
              "dist/vpnconf-${{ steps.version.outputs.value }}-${{ matrix.rid }}${{ matrix.rid == 'win-x64' && '.exe' || '' }}"
 
-      - uses: actions/upload-artifact@v5
+      - uses: actions/upload-artifact@v7
         with:
           name: vpnconf-${{ matrix.rid }}
           path: dist/*
@@ -82,7 +82,7 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: actions/download-artifact@v5
+      - uses: actions/download-artifact@v8
         with:
           path: dist
           merge-multiple: true
