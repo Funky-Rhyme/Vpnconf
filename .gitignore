@@ -32,8 +32,8 @@ coverage*.info
 *.user
 *.suo
 
-# Claude Code — local machine settings
-.claude/settings.local.json
+# Claude Code — local settings + task/planning docs (not for public repo)
+.claude/
 
 # Cursor — internal docs / rules / reference data (not for public repo)
 .cursor/
