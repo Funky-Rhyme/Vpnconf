@@ -42,9 +42,9 @@ jobs:
           - rid: osx-arm64
             os: macos-latest # Apple Silicon runner
             binary: vpnconf
-          - rid: osx-x64
-            os: macos-13 # last Intel runner image GitHub offers
-            binary: vpnconf
+          # osx-x64 (macos-13) dropped for now — GitHub's Intel-macOS runner pool is scarce enough
+          # that this leg was sitting queued for 20+ minutes while the other three finished in
+          # under 2. Re-add if/when there's real demand for an Intel Mac binary.
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v5
