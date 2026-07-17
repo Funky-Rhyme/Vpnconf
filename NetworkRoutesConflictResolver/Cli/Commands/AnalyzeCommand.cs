@@ -1,5 +1,4 @@
 using NetworkRoutesConflictResolver.Engine;
-using NetworkRoutesConflictResolver.Model;
 using NetworkRoutesConflictResolver.Output;
 using NetworkRoutesConflictResolver.Parsing;
 using Spectre.Console;
